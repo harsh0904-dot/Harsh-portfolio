@@ -1,80 +1,89 @@
-# Harsh Goyal — Developer & Designer Portfolio
+# Harsh Vardhan Singh — Data Analyst & QA Intern Portfolio
 
-A dark-themed personal portfolio for **Harsh Goyal** — Computer Science graduate from NSUT, currently a Content R&D Trainee at PhysicsWallah. Focused on UI/UX, front-end development, and GenAI integration.
+A premium, dark-themed personal portfolio for **Harsh Vardhan Singh** — a Data Science graduate from Chanakya University, QA Intern at Arcserve, and Data Analyst. Focused on building automated ETL pipelines, interactive dashboards, and scalable data models.
 
-Built with **React + TypeScript + Vite + Tailwind CSS + Framer Motion**. Designed for one-click deployment on **Vercel**.
+Built with **React + TypeScript + Vite + Tailwind CSS + Framer Motion**. Designed for easy hosting on platforms like **Vercel** or **GitHub Pages**.
 
 ## Stack
 
-- React 18 / TypeScript
-- Vite (build tool)
-- Tailwind CSS (utility-first styling)
-- Framer Motion (animations + scroll effects)
-- Lucide React (icons)
-- Kanit font (Google Fonts, weights 300–900)
+- **Framework**: React 18 / TypeScript
+- **Bundler**: Vite
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion (smooth scroll effects, scaling cards, interactive transitions)
+- **Icons**: Lucide React
+- **Typography**: Kanit font (Google Fonts, weights 300–900)
 
 ## Sections
 
-1. **Hero** — name, tagline, magnetic-hover portrait
-2. **About** — bio + skills grouped by Languages / Frameworks / Tools / AI
-3. **Services** — UI/UX Design, Web Design, Front-end Development, GenAI Integration
-4. **Projects** — sticky-stacking cards for AI Tutor, PiLearn, ResumeIQ, Notch
-5. **Contact** — Email, WhatsApp, LinkedIn, GitHub
+1. **Hero** — Features a cinematic video avatar background (with interactive sound controls), dynamic heading text, and clean navigation.
+2. **About** — Introduction bio and categorised data skills.
+3. **Services** — Data Analytics, Business Intelligence, ETL Pipelines, and Machine Learning.
+4. **Projects** — Interactive, sticky-stacking project showcase cards.
+5. **Contact** — Quick links to Email, WhatsApp, LinkedIn, and GitHub.
 
-## Run locally
+## Run Locally
+
+To get the project running on your local machine:
 
 ```bash
+# Install dependencies
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build → /dist
-npm run preview  # serve /dist locally
+
+# Start the development server (runs on http://localhost:5173)
+npm run dev
+
+# Build the production bundle (creates files in /dist)
+npm run build
+
+# Preview the production build locally
+npm run preview
 ```
 
-## Deploy to Vercel
+## Project Structure
 
-Push to GitHub → import the repo at [vercel.com/new](https://vercel.com/new) → click Deploy. No environment variables needed.
-
-## Project structure
-
-```
+```text
 src/
-├── App.tsx                    # composes all sections
-├── main.tsx                   # React entry
-├── index.css                  # global styles + .hero-heading gradient
+├── App.tsx                    # Composes all layout sections
+├── main.tsx                   # React app entry point
+├── index.css                  # Tailwind styles + scroll-line keyframes
 └── components/
-    ├── HeroSection.tsx        # navbar, massive heading, magnetic portrait
-    ├── AboutSection.tsx       # bio, animated text, skills grid
-    ├── ServicesSection.tsx    # white section, 4 numbered services
-    ├── ProjectsSection.tsx    # sticky-stacking project cards
-    ├── ContactSection.tsx     # 4 contact methods with icons
+    ├── HeroSection.tsx        # Video background, audio toggle, and main title
+    ├── AboutSection.tsx       # Bio text, interactive skill badges, and floating 3D icons
+    ├── ServicesSection.tsx    # Details of data analyst services offered
+    ├── ProjectsSection.tsx    # Stacking sticky cards with preview image layouts
+    ├── ContactSection.tsx     # Clean grid of contact channels and footer
     │
-    ├── ContactButton.tsx      # gradient pill CTA
-    ├── LiveProjectButton.tsx  # ghost outline pill
-    ├── FadeIn.tsx             # whileInView animation wrapper
-    ├── Magnet.tsx             # mouse-following magnetic hover
-    └── AnimatedText.tsx       # char-by-char scroll-driven reveal
+    ├── ContactButton.tsx      # Smooth-scrolling contact button component
+    ├── LiveProjectButton.tsx  # Dynamic button linking to external project codes
+    ├── FadeIn.tsx             # Intersection observer-based scroll animation wrapper
+    └── AnimatedText.tsx       # Scroll-driven character-by-character text reveal
 ```
 
-## Featured projects
+## Featured Projects
 
-| Project | Live | Built with |
+| Project | Code / Repository | Key Technologies |
 |---|---|---|
-| ResumeIQ | [resumeiq-harsh.vercel.app](https://resumeiq-harsh.vercel.app) | React, Gemini API, Vercel |
-| Notch | [notch-zeta.vercel.app](https://notch-zeta.vercel.app) | React, Tailwind, Framer Motion |
+| **ETL & Analytics Platform** | *Internal Project* | ETL pipelines, Python, PostgreSQL, Data Visualization |
+| **Real-Time Weather Monitor** | [GitHub Repo](https://github.com/harsh0904-dot/Real-Time-Alert-Mechanism-System) | Real-time streaming, automated alert system |
+| **Diabetes Prediction Model** | [GitHub Repo](https://github.com/harsh0904-dot/Machine-Learning-Research-Paper) | Python, Machine Learning, predictive modeling |
+| **Smart Campus Chatbot** | [GitHub Repo](https://github.com/harsh0904-dot/Chatbot-Assistant) | NLP, Python, databases, chatbot interface |
 
 ## Customisation
 
-| Want to change | Open this file |
+| If you want to change | Edit this file |
 |---|---|
-| Name, nav links, hero text | `src/components/HeroSection.tsx` |
-| About paragraph, skills list | `src/components/AboutSection.tsx` |
-| Services list | `src/components/ServicesSection.tsx` (`SERVICES` array) |
-| Projects, screenshots, live URLs | `src/components/ProjectsSection.tsx` (`PROJECTS` array) |
-| Contact methods | `src/components/ContactSection.tsx` (`CONTACT_METHODS` array) |
-| Project screenshots | drop new images in `public/` and reference as `/filename.png` |
-| Brand gradient, font, dark colour | `src/index.css` and `tailwind.config.js` |
-| Page title, meta description | `index.html` |
+| Video avatar background | Replace `public/intro.mp4` or modify [HeroSection.tsx](file:///d:/portfolio/harsh-portfolio/src/components/HeroSection.tsx) |
+| Name, titles, layout text | [HeroSection.tsx](file:///d:/portfolio/harsh-portfolio/src/components/HeroSection.tsx) |
+| About text, custom skills list | [AboutSection.tsx](file:///d:/portfolio/harsh-portfolio/src/components/AboutSection.tsx) |
+| Services descriptions | [ServicesSection.tsx](file:///d:/portfolio/harsh-portfolio/src/components/ServicesSection.tsx) |
+| Project info, images, and links | [ProjectsSection.tsx](file:///d:/portfolio/harsh-portfolio/src/components/ProjectsSection.tsx) |
+| Contact links, social channels | [ContactSection.tsx](file:///d:/portfolio/harsh-portfolio/src/components/ContactSection.tsx) |
+| Page title, favicon, SEO meta tags | [index.html](file:///d:/portfolio/harsh-portfolio/index.html) |
 
-## Credits
+## Contact
 
-Designed & built by **Harsh Goyal** · [LinkedIn](https://www.linkedin.com/in/harsh-goyal-7900b2256/) · [GitHub](https://github.com/harshgoyal27)
+Designed & built by **Harsh Vardhan Singh**
+* **LinkedIn**: [in/harsh-vardhan-singh-3180222b1](https://www.linkedin.com/in/harsh-vardhan-singh-3180222b1)
+* **GitHub**: [github.com/harsh0904-dot](https://github.com/harsh0904-dot)
+* **Email**: [singhharshvardhan178@gmail.com](mailto:singhharshvardhan178@gmail.com)
+* **WhatsApp**: [+91 63984 45808](https://wa.me/916398445808)
