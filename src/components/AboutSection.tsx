@@ -3,7 +3,7 @@ import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I'm a Data Science graduate from Chanakya University and QA Intern at Arcserve. I specialize in building automated ETL pipelines, interactive Grafana dashboards, and scalable data models, focusing on turning complex datasets into real-time, actionable insights. Let's build something incredible together!";
+  "I am a Data Analyst with a Master's degree in Data Science from Chanakya University and hands-on experience in data analytics. I specialize in building interactive dashboards and scalable data models, focusing on turning complex datasets into real-time, actionable insights. I am passionate about leveraging data to solve real-world problems and continuously expanding my skills in analytics, data engineering, and machine learning. Let's build something incredible together!";
 
 const AboutSection = () => {
   return (
@@ -17,7 +17,7 @@ const AboutSection = () => {
         x={-80}
         y={0}
         duration={0.9}
-          className="pointer-events-none absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
+        className="pointer-events-none absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
       >
         <img
           src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
@@ -33,7 +33,7 @@ const AboutSection = () => {
         x={-80}
         y={0}
         duration={0.9}
-          className="pointer-events-none absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[55px] sm:w-[140px] md:w-[180px]"
+        className="pointer-events-none absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[55px] sm:w-[140px] md:w-[180px]"
       >
         <img
           src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
@@ -49,7 +49,7 @@ const AboutSection = () => {
         x={80}
         y={0}
         duration={0.9}
-          className="pointer-events-none absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
+        className="pointer-events-none absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
       >
         <img
           src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
@@ -65,7 +65,7 @@ const AboutSection = () => {
         x={80}
         y={0}
         duration={0.9}
-          className="pointer-events-none absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] w-[65px] sm:w-[170px] md:w-[220px]"
+        className="pointer-events-none absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] w-[65px] sm:w-[170px] md:w-[220px]"
       >
         <img
           src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
@@ -87,60 +87,60 @@ const AboutSection = () => {
           </h2>
         </FadeIn>
 
-          <div className="flex flex-col items-center gap-12 sm:gap-16 md:gap-20">
-                    <AnimatedText
-                      text={ABOUT_TEXT}
-                      className="font-medium leading-relaxed text-[#D7E2EA] max-w-[560px]"
-                      style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
-                    />
+        <div className="flex flex-col items-center gap-12 sm:gap-16 md:gap-20">
+          <AnimatedText
+            text={ABOUT_TEXT}
+            className="font-medium leading-relaxed text-[#D7E2EA] max-w-[560px]"
+            style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
+          />
 
-                    {/* Skills */}
-                    <FadeIn delay={0.15} className="w-full max-w-3xl">
-                      <div className="flex flex-col gap-5 sm:gap-6">
-                        {[
-                          {
-                            label: 'Languages',
-                            items: ['Python', 'SQL'],
-                          },
-                          {
-                            label: 'Data Analysis & Viz',
-                            items: ['Pandas', 'NumPy', 'Tableau', 'Power BI', 'Grafana', 'Apache Superset', 'Excel'],
-                          },
-                          {
-                            label: 'Databases & Tools',
-                            items: ['PostgreSQL', 'MySQL', 'Apache Kafka', 'REST APIs'],
-                          },
-                          {
-                            label: 'Cloud & DevOps',
-                            items: ['Git', 'ETL Pipelines', 'Prometheus', 'Jira'],
-                          },
-                        ].map((group) => (
-                          <div
-                            key={group.label}
-                            className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
-                          >
-                            <span className="text-xs uppercase tracking-widest text-[#D7E2EA]/40 sm:w-44 sm:shrink-0 sm:text-right">
-                              {group.label}
-                            </span>
-                            <div className="flex flex-wrap gap-2">
-                              {group.items.map((item) => (
-                                <span
-                                  key={item}
-                                  className="rounded-full border border-[#D7E2EA]/15 bg-[#D7E2EA]/[0.03] px-3 py-1 text-sm text-[#D7E2EA]/80 hover:border-[#D7E2EA]/40 hover:text-[#D7E2EA] transition-colors"
-                                >
-                                  {item}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </FadeIn>
+          {/* Skills */}
+          <FadeIn delay={0.15} className="w-full max-w-3xl">
+            <div className="flex flex-col gap-5 sm:gap-6">
+              {[
+                {
+                  label: 'Languages',
+                  items: ['Python', 'SQL'],
+                },
+                {
+                  label: 'Data Analysis & Viz',
+                  items: ['Pandas', 'NumPy', 'Tableau', 'Power BI', 'Grafana', 'Apache Superset', 'Excel'],
+                },
+                {
+                  label: 'Databases & Tools',
+                  items: ['PostgreSQL', 'MySQL', 'Apache Kafka', 'REST APIs'],
+                },
+                {
+                  label: 'Cloud & DevOps',
+                  items: ['Git', 'ETL Pipelines', 'Prometheus', 'Jira'],
+                },
+              ].map((group) => (
+                <div
+                  key={group.label}
+                  className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
+                >
+                  <span className="text-xs uppercase tracking-widest text-[#D7E2EA]/40 sm:w-44 sm:shrink-0 sm:text-right">
+                    {group.label}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-[#D7E2EA]/15 bg-[#D7E2EA]/[0.03] px-3 py-1 text-sm text-[#D7E2EA]/80 hover:border-[#D7E2EA]/40 hover:text-[#D7E2EA] transition-colors"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
 
-                    <FadeIn delay={0.25}>
-                      <ContactButton />
-                    </FadeIn>
-                  </div>      </div>
+          <FadeIn delay={0.25}>
+            <ContactButton />
+          </FadeIn>
+        </div>      </div>
     </section>
   );
 };
