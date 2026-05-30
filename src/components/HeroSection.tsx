@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Volume2, VolumeX } from 'lucide-react';
 import FadeIn from './FadeIn';
 
 const NAV_LINKS = [
@@ -185,7 +186,27 @@ const HeroSection = () => {
             </a>
           </FadeIn>
 
-
+          {/* Sound control */}
+          <FadeIn delay={1.1} y={20}>
+            <div className="relative flex items-center gap-3">
+              {showSoundHint && (
+                <span className="text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.25em] text-white/70 bg-black/40 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm animate-pulse">
+                  Tap for sound
+                </span>
+              )}
+              <button
+                onClick={toggleMute}
+                className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 hover:scale-105 active:scale-95"
+                aria-label={muted ? 'Unmute video' : 'Mute video'}
+              >
+                {muted ? (
+                  <VolumeX className="h-4.5 w-4.5 transition-transform group-hover:scale-110" />
+                ) : (
+                  <Volume2 className="h-4.5 w-4.5 transition-transform group-hover:scale-110" />
+                )}
+              </button>
+            </div>
+          </FadeIn>
         </div>
       </div>
 
