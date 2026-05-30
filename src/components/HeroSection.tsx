@@ -85,7 +85,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-black">
+    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-[#0C0C0C]">
+      {/* Glowing animated background blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#bbccd7]/[0.03] blur-[120px] animate-blob" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#646973]/[0.04] blur-[150px] animate-blob animation-delay-2000" />
+        <div className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] rounded-full bg-[#D7E2EA]/[0.02] blur-[100px] animate-blob animation-delay-4000" />
+      </div>
+
       {/* Video background */}
       <video
         ref={videoRef}
@@ -94,14 +101,14 @@ const HeroSection = () => {
         loop
         playsInline
         preload="auto"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover z-0"
       >
         <source src="/intro.mp4" type="video/mp4" />
       </video>
 
       {/* Cinematic gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/40 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 z-0" />
 
       {/* Content layer */}
       <div className="relative z-10 flex h-full flex-col">
@@ -144,14 +151,19 @@ const HeroSection = () => {
                 className="font-black uppercase leading-[0.88] tracking-tight text-white"
                 style={{ fontSize: 'clamp(3rem, 12vw, 10.5rem)' }}
               >
-                Harsh<br />Goyal
+                Harsh Vardhan<br />Singh
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.85} y={20}>
-              <p className="mt-5 md:mt-7 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-[0.3em] text-white/75">
-                Developer · Designer · GenAI Integration
-              </p>
+              <div className="flex flex-col gap-2 mt-5 md:mt-7">
+                <p className="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-white/90">
+                  Data Analyst | Python, SQL & Data Visualization
+                </p>
+                <p className="text-[9px] sm:text-[10px] md:text-xs font-light uppercase tracking-[0.2em] text-white/60">
+                  Transforming Raw Data into Actionable Intelligence
+                </p>
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -173,37 +185,7 @@ const HeroSection = () => {
             </a>
           </FadeIn>
 
-          {/* Mute toggle + Sound hint */}
-          <FadeIn delay={1.1} y={20}>
-            <div className="flex items-center gap-3">
-              {showSoundHint && (
-                <span
-                  className="hidden sm:inline text-[10px] font-medium uppercase tracking-[0.25em] text-white/80"
-                  style={{ animation: 'pulseFade 2s ease-in-out infinite' }}
-                >
-                  Tap for sound
-                </span>
-              )}
-              <button
-                onClick={toggleMute}
-                aria-label={muted ? 'Unmute video' : 'Mute video'}
-                className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 hover:scale-110"
-              >
-                {muted ? (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                    <line x1="23" y1="9" x2="17" y2="15" />
-                    <line x1="17" y1="9" x2="23" y2="15" />
-                  </svg>
-                ) : (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
-                  </svg>
-                )}
-              </button>
-            </div>
-          </FadeIn>
+
         </div>
       </div>
 
@@ -215,6 +197,21 @@ const HeroSection = () => {
         @keyframes pulseFade {
           0%, 100% { opacity: 0.5; }
           50% { opacity: 1; }
+        }
+        @keyframes blob {
+          0% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.95); }
+          100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+          animation: blob 20s infinite ease-in-out;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
         }
       `}</style>
     </section>

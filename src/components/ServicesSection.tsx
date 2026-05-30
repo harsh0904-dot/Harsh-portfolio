@@ -4,33 +4,27 @@ import FadeIn from './FadeIn';
 const SERVICES = [
   {
     number: '01',
-    title: 'UI/UX Design',
+    title: 'Data Engineering & ETL Pipelines',
     description:
-      'Designing clean, intuitive interfaces that prioritise user flow, hierarchy, and visual clarity — turning ideas into experiences people actually enjoy using.',
+      'Building end-to-end data pipelines using Python (requests, pandas) and REST APIs. Ingesting, transforming, and loading multi-source QA datasets into centralized PostgreSQL data warehouses.',
   },
   {
     number: '02',
-    title: 'Front-end Development',
+    title: 'Data Visualization & Analytics',
     description:
-      'Building responsive, performant web apps with React, TypeScript, and Tailwind — pixel-perfect on every screen, deployed seamlessly on Vercel.',
+      'Designing and deploying interactive Grafana, Tableau, and Power BI dashboards. Creating dynamic variables and time-series queries to track key metrics and trends.',
   },
   {
     number: '03',
-    title: 'GenAI Integration',
+    title: 'QA Automation & Testing (Beginner)',
     description:
-      'Wiring large language models into real products via Gemini, Claude, and OpenAI APIs — from resume reviewers to AI tutors and beyond.',
+      'Automating test reporting workflows, optimizing test case metrics, and integrating TestRail with Jira to enhance QA visibility across engineering teams.',
   },
   {
     number: '04',
-    title: 'Prompt Engineering & LLM Automation',
+    title: 'Database Design & Optimization',
     description:
-      'Crafting reliable prompts and automation flows that turn LLMs into production-grade tools for content, analysis, and decision support.',
-  },
-  {
-    number: '05',
-    title: 'Data Analysis & Visualization',
-    description:
-      'Exploring datasets with Python (Pandas, NumPy, Seaborn) and Power BI — turning raw numbers into clear insights and dashboards stakeholders can act on.',
+      'Optimizing SQL queries, designing high-performance database schemas, and building relational databases that support real-time data visualization and processing.',
   },
 ];
 

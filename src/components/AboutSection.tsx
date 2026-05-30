@@ -3,7 +3,7 @@ import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I'm a Computer Science graduate from NSUT, currently a Content R&D Trainee at PhysicsWallah, where I help ship live, customer-facing learning products. I focus on UI/UX, front-end development, and GenAI integration — turning rough ideas into clean, engaging digital experiences. Let's build something incredible together!";
+  "I'm a Data Science graduate from Chanakya University and QA Intern at Arcserve. I specialize in building automated ETL pipelines, interactive Grafana dashboards, and scalable data models, focusing on turning complex datasets into real-time, actionable insights. Let's build something incredible together!";
 
 const AboutSection = () => {
   return (
@@ -100,19 +100,19 @@ const AboutSection = () => {
                         {[
                           {
                             label: 'Languages',
-                            items: ['Python', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+                            items: ['Python', 'SQL'],
                           },
                           {
-                            label: 'Frameworks & Libraries',
-                            items: ['React', 'Tailwind', 'Pandas', 'NumPy', 'Scikit-learn', 'NLTK'],
+                            label: 'Data Analysis & Viz',
+                            items: ['Pandas', 'NumPy', 'Tableau', 'Power BI', 'Grafana', 'Apache Superset', 'Excel'],
                           },
                           {
-                            label: 'Tools & Platforms',
-                            items: ['Figma', 'Vercel', 'Git', 'GitHub', 'Power BI', 'Canva', 'Excel'],
+                            label: 'Databases & Tools',
+                            items: ['PostgreSQL', 'MySQL', 'Apache Kafka', 'REST APIs'],
                           },
                           {
-                            label: 'AI & GenAI',
-                            items: ['Gemini', 'Claude', 'OpenAI', 'Prompt engineering'],
+                            label: 'Cloud & DevOps',
+                            items: ['Git', 'ETL Pipelines', 'Prometheus', 'Jira'],
                           },
                         ].map((group) => (
                           <div

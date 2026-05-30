@@ -7,48 +7,51 @@ interface ProjectData {
   number: string;
   category: string;
   name: string;
-  liveUrl: string;
+  liveUrl?: string;
+  buttonLabel?: string;
   col1Image1: string;
   col1Image2: string;
   col2Image: string;
 }
 
 const PROJECTS: ProjectData[] = [
-    {
-        number: '01',
-        category: 'Personal',
-        name: 'Forge',
-        liveUrl: 'https://forge-pink-seven.vercel.app/',
-        col1Image1: '/Forge.png',
-        col1Image2: '/Forge1.png',
-        col2Image: '/Forge2.png',
-      },
   {
-      number: '02',
-      category: 'Personal',
-      name: 'LawLab',
-      liveUrl: 'https://lawlab-self.vercel.app',
-      col1Image1: '/lawlab.png',
-      col1Image2: '/lawlab1.png',
-      col2Image: '/lawlab2.png',
-    },
+    number: '01',
+    category: 'ETL & Data Analytics',
+    name: 'ETL & Analytics Platform',
+    col1Image1: '/analytics_dashboard_generic.png',
+    col1Image2: '/code_editor_generic.png',
+    col2Image: '/etl_platform_one.png',
+  },
+  {
+    number: '02',
+    category: 'Streaming & DevOps',
+    name: 'Real-Time Weather Monitor',
+    liveUrl: 'https://github.com/harsh0904-dot/Real-Time-Alert-Mechanism-System',
+    buttonLabel: 'View Code',
+    col1Image1: '/analytics_dashboard_generic.png',
+    col1Image2: '/code_editor_generic.png',
+    col2Image: '/weather_alert_one.png',
+  },
   {
     number: '03',
-    category: 'Personal · GenAI',
-    name: 'ResumeIQ',
-    liveUrl: 'https://resumeiq-harsh.vercel.app/',
-    col1Image1: '/resumeiq-hero.png',
-    col1Image2: '/resumeiq-feedback.png',
-    col2Image: '/resumeiq-score.png',
+    category: 'Machine Learning',
+    name: 'Diabetes Prediction Model',
+    liveUrl: 'https://github.com/harsh0904-dot/Machine-Learning-Research-Paper',
+    buttonLabel: 'View Code',
+    col1Image1: '/analytics_dashboard_generic.png',
+    col1Image2: '/code_editor_generic.png',
+    col2Image: '/diabetes_model_one.png',
   },
   {
     number: '04',
-    category: 'Personal · Design',
-    name: 'Notch',
-    liveUrl: 'https://notch-zeta.vercel.app/',
-    col1Image1: '/notch-hero.png',
-    col1Image2: '/notch-pricing.png',
-    col2Image: '/notch-mockup.png',
+    category: 'NLP & Databases',
+    name: 'Smart Campus Chatbot',
+    liveUrl: 'https://github.com/harsh0904-dot/Chatbot-Assistant',
+    buttonLabel: 'View Code',
+    col1Image1: '/analytics_dashboard_generic.png',
+    col1Image2: '/code_editor_generic.png',
+    col2Image: '/chatbot_one.png',
   },
 ];
 
@@ -109,9 +112,15 @@ const ProjectCard = ({ project, index, total, containerRef }: ProjectCardProps) 
                       </div>
                     </div>
 
-                    <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
-                      <LiveProjectButton href={project.liveUrl} className="w-full sm:w-auto" />
-                    </div>
+                    {project.liveUrl && (
+                      <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
+                        <LiveProjectButton
+                          href={project.liveUrl}
+                          label={project.buttonLabel || 'Live Project'}
+                          className="w-full sm:w-auto"
+                        />
+                      </div>
+                    )}
                   </div>
 
         {/* Bottom row: two-column image grid */}
