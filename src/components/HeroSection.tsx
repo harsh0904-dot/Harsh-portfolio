@@ -159,7 +159,7 @@ const HeroSection = () => {
             <FadeIn delay={0.85} y={20}>
               <div className="flex flex-col gap-2 mt-5 md:mt-7">
                 <p className="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-white/90">
-                  Data Analyst | Python, SQL & Data Visualization
+                  Data Analyst | Data & Analytics Engineering | BI Reporting
                 </p>
                 <p className="text-[9px] sm:text-[10px] md:text-xs font-light uppercase tracking-[0.2em] text-white/60">
                   Transforming Raw Data into Actionable Intelligence

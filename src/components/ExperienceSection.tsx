@@ -12,32 +12,31 @@ interface TimelineItem {
 
 const EXPERIENCE_DATA: TimelineItem[] = [
   {
-    title: 'QA Intern (R&D – Testing/QA)',
+    title: 'QA Analyst – R&D (Testing/QA) — Data Analytics & Reporting Focus',
     subtitle: 'Arcserve',
     period: 'May 2025 – Present',
     location: 'Bangalore, India',
     bullets: [
-      'Engineered automated ETL pipelines using Python (requests, pandas) and REST APIs to extract, transform, and load TestRail and Jira datasets into PostgreSQL, reducing manual reporting time by 80%',
-      'Designed and deployed 5+ interactive Grafana dashboards with dynamic variables and time-series queries to track automation coverage, milestone progress, and defect distributions across 10+ projects',
-      'Optimized SQL queries and database schema, improving dashboard load times by 40% and enabling real-time insights for cross-functional QA teams',
-      'Implemented comprehensive logging and CSV export functionality for audit trails and regulatory compliance',
+      'Automated reporting pipelines: engineered Python-based ETL workflows (requests, pandas) pulling from TestRail and Jira REST APIs into PostgreSQL, cutting manual reporting time by 80%.',
+      'Built self-serve analytics: designed and deployed 15+ interactive Grafana dashboards with dynamic variables and time-series queries, delivering KPI tracking and stakeholder reporting for 5+ project teams on automation coverage, milestones, and defect trends.',
+      'Improved data performance: optimized SQL queries and schema design, improving dashboard load times by 40% for cross-functional QA stakeholder reporting.',
+      'Ensured data integrity: implemented logging, data quality checks, and CSV export workflows to support audit trails and regulatory compliance, in close cross-functional collaboration with QA, engineering, and product teams.',
     ],
   },
   {
     title: 'AI Intern (Virtual)',
     subtitle: 'CodSoft',
-    period: 'Virtual Internship',
+    period: '2024',
     location: 'India',
     bullets: [
-      'Developed 3 AI-powered applications including a rule-based chatbot, recommendation engine, and image captioning model using NLP and computer vision techniques',
-      'Applied supervised and unsupervised learning algorithms to solve real-world problems, demonstrating end-to-end ML pipeline development',
+      'Delivered 3 AI applications: built a rule-based chatbot, a recommendation engine, and an image-captioning model using NLP, computer vision, and supervised/unsupervised learning.',
     ],
   },
 ];
 
 const EDUCATION_DATA: TimelineItem[] = [
   {
-    title: 'Master of Science in Data Science',
+    title: 'Master of Science, Data Science',
     subtitle: 'Chanakya University',
     period: '2023 – 2025',
     location: 'Bangalore, India',
@@ -50,10 +49,72 @@ const EDUCATION_DATA: TimelineItem[] = [
   },
 ];
 
-const ExperienceSection = () => {
-  const [activeTab, setActiveTab] = useState<'experience' | 'education'>('experience');
+const CERTIFICATIONS_DATA: TimelineItem[] = [
+  {
+    title: 'Data Analytics',
+    subtitle: 'Deloitte',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'Google AI Essentials',
+    subtitle: 'Google',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'Google Prompt Essentials',
+    subtitle: 'Google',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'Power BI Using AI',
+    subtitle: 'Professional Certification',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'SQL Using AI',
+    subtitle: 'Professional Certification',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'Advanced Excel with AI & ChatGPT',
+    subtitle: 'Professional Certification',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'OpenAI GPT Models',
+    subtitle: 'Infosys',
+    period: 'Workshop',
+    location: 'Online',
+  },
+  {
+    title: 'Prompt Engineering',
+    subtitle: 'Infosys',
+    period: 'Workshop',
+    location: 'Online',
+  },
+  {
+    title: 'Quantitative Research',
+    subtitle: 'JP Morgan',
+    period: 'Certification',
+    location: 'Online',
+  },
+];
 
-  const items = activeTab === 'experience' ? EXPERIENCE_DATA : EDUCATION_DATA;
+const ExperienceSection = () => {
+  const [activeTab, setActiveTab] = useState<'experience' | 'education' | 'certifications'>('experience');
+
+  const items =
+    activeTab === 'experience'
+      ? EXPERIENCE_DATA
+      : activeTab === 'education'
+        ? EDUCATION_DATA
+        : CERTIFICATIONS_DATA;
 
   return (
     <section
@@ -76,26 +137,33 @@ const ExperienceSection = () => {
         {/* Tab switcher switcher */}
         <FadeIn delay={0.1} y={20}>
           <div className="flex justify-center mb-16 sm:mb-20">
-            <div className="inline-flex rounded-full border border-[#D7E2EA]/15 bg-[#141418]/60 p-1 backdrop-blur-md">
+            <div className="inline-flex flex-wrap justify-center rounded-full border border-[#D7E2EA]/15 bg-[#141418]/60 p-1 backdrop-blur-md">
               <button
                 onClick={() => setActiveTab('experience')}
-                className={`relative rounded-full px-6 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest transition-all duration-300 ${
-                  activeTab === 'experience'
+                className={`relative rounded-full px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest transition-all duration-300 ${activeTab === 'experience'
                     ? 'bg-[#D7E2EA] text-[#0C0C0C]'
                     : 'text-[#D7E2EA]/50 hover:text-[#D7E2EA]'
-                }`}
+                  }`}
               >
                 Experience
               </button>
               <button
                 onClick={() => setActiveTab('education')}
-                className={`relative rounded-full px-6 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest transition-all duration-300 ${
-                  activeTab === 'education'
+                className={`relative rounded-full px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest transition-all duration-300 ${activeTab === 'education'
                     ? 'bg-[#D7E2EA] text-[#0C0C0C]'
                     : 'text-[#D7E2EA]/50 hover:text-[#D7E2EA]'
-                }`}
+                  }`}
               >
                 Education
+              </button>
+              <button
+                onClick={() => setActiveTab('certifications')}
+                className={`relative rounded-full px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest transition-all duration-300 ${activeTab === 'certifications'
+                    ? 'bg-[#D7E2EA] text-[#0C0C0C]'
+                    : 'text-[#D7E2EA]/50 hover:text-[#D7E2EA]'
+                  }`}
+              >
+                Certifications
               </button>
             </div>
           </div>

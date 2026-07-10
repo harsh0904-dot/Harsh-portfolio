@@ -3,7 +3,7 @@ import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I am a Data Analyst with a Master's degree in Data Science from Chanakya University and hands-on experience in data analytics. I specialize in building interactive dashboards and scalable data models, focusing on turning complex datasets into real-time, actionable insights. I am passionate about leveraging data to solve real-world problems and continuously expanding my skills in analytics, data engineering, and machine learning. Let's build something incredible together!";
+  "I am a Data Analyst with an M.S. in Data Science and hands-on experience turning raw operational data into decision-ready dashboards and reports. I have built automated ETL pipelines that cut manual reporting time by 80% and deployed 15+ Grafana dashboards used daily by cross-functional teams across 5+ projects. Skilled in SQL, Python, data visualization, and BI reporting, I have deep experience in data modeling, KPI tracking, and stakeholder reporting. Let's build something incredible together!";
 
 const AboutSection = () => {
   return (
@@ -99,20 +99,24 @@ const AboutSection = () => {
             <div className="flex flex-col gap-5 sm:gap-6">
               {[
                 {
-                  label: 'Languages',
+                  label: 'Languages & Querying',
                   items: ['Python', 'SQL'],
                 },
                 {
                   label: 'Data Analysis & Viz',
-                  items: ['Pandas', 'NumPy', 'Tableau', 'Power BI', 'Grafana', 'Apache Superset', 'Excel'],
+                  items: ['Power BI', 'DAX', 'Tableau', 'Apache Superset', 'Grafana', 'Excel (Advanced)', 'Pandas', 'NumPy'],
                 },
                 {
-                  label: 'Databases & Tools',
-                  items: ['PostgreSQL', 'MySQL', 'Apache Kafka', 'REST APIs'],
+                  label: 'Data Engineering',
+                  items: ['ETL Pipelines', 'Reporting Automation', 'Data Modeling', 'Data Quality', 'REST APIs', 'Apache Kafka', 'Data Warehousing'],
                 },
                 {
-                  label: 'Cloud & DevOps',
-                  items: ['Git', 'ETL Pipelines', 'Prometheus', 'Jira'],
+                  label: 'Databases',
+                  items: ['PostgreSQL', 'MySQL'],
+                },
+                {
+                  label: 'Tools & Practices',
+                  items: ['Git', 'Jira', 'TestRail', 'Prometheus'],
                 },
               ].map((group) => (
                 <div
