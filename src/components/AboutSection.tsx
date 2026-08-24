@@ -3,7 +3,7 @@ import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I am a Data Analyst with an M.S. in Data Science and hands-on experience turning raw operational data into decision-ready dashboards and reports. I have built automated ETL pipelines that cut manual reporting time by 80% and deployed 15+ Grafana dashboards used daily by cross-functional teams across 5+ projects. Skilled in SQL, Python, data visualization, and BI reporting, I have deep experience in data modeling, KPI tracking, and stakeholder reporting. Let's build something incredible together!";
+  "I am a Data Analyst with an M.S. in Data Science and hands-on experience turning raw operational data into decision-ready dashboards and reports. I have built automated ETL pipelines that cut manual reporting time by 80% and deployed 15+ Grafana dashboards used daily by cross-functional QA and engineering teams across 5+ projects. Skilled in SQL, Python, data visualization, and BI reporting, with experience in data modeling, data quality, KPI tracking, stakeholder reporting, and data governance. Comfortable working in lean, fast-moving environments — translating complex data into clear, actionable insights for non-technical stakeholders and founders.";
 
 const AboutSection = () => {
   return (
@@ -104,11 +104,15 @@ const AboutSection = () => {
                 },
                 {
                   label: 'Data Analysis & Viz',
-                  items: ['Power BI', 'DAX', 'Tableau', 'Apache Superset', 'Grafana', 'Excel (Advanced)', 'Pandas', 'NumPy'],
+                  items: ['Data Visualization', 'Business Intelligence (BI)', 'Power BI', 'DAX', 'Tableau', 'Looker', 'Apache Superset', 'Grafana', 'Excel (Advanced)', 'Pandas', 'NumPy', 'Plotly'],
+                },
+                {
+                  label: 'Dashboarding & Apps',
+                  items: ['Streamlit', 'Interactive Dashboards', 'Data Storytelling', 'Render'],
                 },
                 {
                   label: 'Data Engineering',
-                  items: ['ETL Pipelines', 'Reporting Automation', 'Data Modeling', 'Data Quality', 'REST APIs', 'Apache Kafka', 'Data Warehousing'],
+                  items: ['ETL Pipeline Design', 'Reporting Automation', 'Data Modeling', 'Data Quality', 'REST API Integration', 'Apache Kafka', 'Data Warehousing', 'Data Cleaning'],
                 },
                 {
                   label: 'Databases',

@@ -3,6 +3,7 @@ import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
+import DashboardsSection from './components/DashboardsSection';
 import ContactSection from './components/ContactSection';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <ExperienceSection />
       <ServicesSection />
       <ProjectsSection />
+      <DashboardsSection />
       <ContactSection />
     </main>
   );

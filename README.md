@@ -63,10 +63,13 @@ src/
 
 | Project | Code / Repository | Key Technologies |
 |---|---|---|
-| **ETL & Analytics Platform** | *Internal Project* | ETL pipelines, Python, PostgreSQL, Data Visualization |
-| **Real-Time Weather Monitor** | [GitHub Repo](https://github.com/harsh0904-dot/Real-Time-Alert-Mechanism-System) | Real-time streaming, automated alert system |
-| **Diabetes Prediction Model** | [GitHub Repo](https://github.com/harsh0904-dot/Machine-Learning-Research-Paper) | Python, Machine Learning, predictive modeling |
-| **Smart Campus Chatbot** | [GitHub Repo](https://github.com/harsh0904-dot/Chatbot-Assistant) | NLP, Python, databases, chatbot interface |
+| **Multi-Domain Analytics Portfolio** | [GitHub Repo](https://github.com/harsh0904-dot/streamlit-analytics-portfolio) | Streamlit, Plotly, Python, Pandas, NumPy |
+| **Live Monitoring Analytics Dashboard** | [GitHub Repo](https://github.com/harsh0904-dot/Live_Monitoring_Analytics_Dashboard) | Python, Streamlit, Plotly, PyVista, Pandas |
+| **Multi-Domain Power BI Portfolio** | [GitHub Repo](https://github.com/harsh0904-dot/Data-Analytics-Projects) | SQL, Python, Power BI, DAX |
+| **ETL & Analytics Platform** | *Internal Project / Arcserve R&D* | ETL pipelines, Python, PostgreSQL, REST APIs |
+| **Real-Time Weather Monitor** | [GitHub Repo](https://github.com/harsh0904-dot/Real-Time-Alert-Mechanism-System) | Apache Kafka, PostgreSQL, Superset, Telegram API |
+| **Diabetes Prediction Model** | [GitHub Repo](https://github.com/harsh0904-dot/Machine-Learning-Research-Paper) | XGBoost, Random Forest, SHAP, LIME |
+| **Smart Campus Chatbot** | [GitHub Repo](https://github.com/harsh0904-dot/Chatbot-Assistant) | NLP, Python, Database Integration |
 
 ## Customisation
 

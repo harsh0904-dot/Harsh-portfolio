@@ -5,6 +5,7 @@ import FadeIn from './FadeIn';
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Dashboards', href: '#dashboards' },
   { label: 'Contact', href: '#contact' },
 ];
 
