@@ -12,7 +12,7 @@ interface TimelineItem {
 
 const EXPERIENCE_DATA: TimelineItem[] = [
   {
-    title: 'QA Analyst – R&D (Testing/QA) — Data Analytics & Reporting Focus',
+    title: 'Data Analyst (QA Analytics & Reporting)',
     subtitle: 'Arcserve',
     period: 'May 2025 – Present',
     location: 'Bangalore, India',
@@ -57,6 +57,24 @@ const CERTIFICATIONS_DATA: TimelineItem[] = [
     location: 'Online',
   },
   {
+    title: 'Quantitative Research',
+    subtitle: 'JP Morgan',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'OpenAI GPT Models',
+    subtitle: 'Infosys',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
+    title: 'Prompt Engineering',
+    subtitle: 'Infosys',
+    period: 'Certification',
+    location: 'Online',
+  },
+  {
     title: 'Google AI Essentials',
     subtitle: 'Google',
     period: 'Certification',
@@ -70,38 +88,20 @@ const CERTIFICATIONS_DATA: TimelineItem[] = [
   },
   {
     title: 'Power BI Using AI',
-    subtitle: 'Professional Certification',
-    period: 'Certification',
+    subtitle: 'Workshop',
+    period: 'Workshop',
     location: 'Online',
   },
   {
     title: 'SQL Using AI',
-    subtitle: 'Professional Certification',
-    period: 'Certification',
+    subtitle: 'Workshop',
+    period: 'Workshop',
     location: 'Online',
   },
   {
     title: 'Advanced Excel with AI & ChatGPT',
-    subtitle: 'Professional Certification',
-    period: 'Certification',
-    location: 'Online',
-  },
-  {
-    title: 'OpenAI GPT Models',
-    subtitle: 'Infosys',
+    subtitle: 'Workshop',
     period: 'Workshop',
-    location: 'Online',
-  },
-  {
-    title: 'Prompt Engineering',
-    subtitle: 'Infosys',
-    period: 'Workshop',
-    location: 'Online',
-  },
-  {
-    title: 'Quantitative Research',
-    subtitle: 'JP Morgan',
-    period: 'Certification',
     location: 'Online',
   },
 ];

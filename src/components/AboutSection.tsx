@@ -3,7 +3,7 @@ import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I am a Data Analyst with an M.S. in Data Science and hands-on experience turning raw operational data into decision-ready dashboards and reports. I have built automated ETL pipelines that cut manual reporting time by 80% and deployed 15+ Grafana dashboards used daily by cross-functional QA and engineering teams across 5+ projects. Skilled in SQL, Python, data visualization, and BI reporting, with experience in data modeling, data quality, KPI tracking, stakeholder reporting, and data governance. Comfortable working in lean, fast-moving environments — translating complex data into clear, actionable insights for non-technical stakeholders and founders.";
+  "I am a Data Analyst with an M.S. in Data Science and hands-on experience turning raw operational data into decision-ready dashboards and reports. I have built automated ETL pipelines that cut manual reporting time by 80% and deployed 15+ Grafana dashboards used daily by cross-functional QA and engineering teams across 5+ projects. Skilled in SQL, Python, PostgreSQL, data warehousing, ETL/ELT, dbt, dimensional modeling, and BI reporting (Power BI, Tableau), with experience in KPI tracking, stakeholder reporting, data quality, data governance, and integrating data from multiple SaaS systems and APIs. Translating complex data into clear, actionable insights for technical and non-technical stakeholders.";
 
 const AboutSection = () => {
   return (
@@ -100,23 +100,19 @@ const AboutSection = () => {
               {[
                 {
                   label: 'Languages & Querying',
-                  items: ['Python', 'SQL'],
+                  items: ['SQL', 'PostgreSQL', 'MySQL', 'Python'],
                 },
                 {
                   label: 'Data Analysis & Viz',
-                  items: ['Data Visualization', 'Business Intelligence (BI)', 'Power BI', 'DAX', 'Tableau', 'Looker', 'Apache Superset', 'Grafana', 'Excel (Advanced)', 'Pandas', 'NumPy', 'Plotly'],
+                  items: ['Data Visualization', 'Business Intelligence (BI)', 'Power BI', 'DAX', 'Tableau', 'Looker', 'Apache Superset', 'Grafana', 'Excel (Advanced)', 'Pandas', 'NumPy', 'Plotly', 'Data Storytelling'],
                 },
                 {
-                  label: 'Dashboarding & Apps',
-                  items: ['Streamlit', 'Interactive Dashboards', 'Data Storytelling', 'Render'],
+                  label: 'Data Engineering & Modeling',
+                  items: ['ETL/ELT Pipeline Design', 'dbt', 'Data Warehousing', 'Dimensional Modeling', 'Data Modeling', 'Semantic/Metrics Layers', 'SaaS & REST API Integration', 'Apache Kafka', 'Reporting Automation', 'Data Quality', 'Data Cleaning'],
                 },
                 {
-                  label: 'Data Engineering',
-                  items: ['ETL Pipeline Design', 'Reporting Automation', 'Data Modeling', 'Data Quality', 'REST API Integration', 'Apache Kafka', 'Data Warehousing', 'Data Cleaning'],
-                },
-                {
-                  label: 'Databases',
-                  items: ['PostgreSQL', 'MySQL'],
+                  label: 'App Development',
+                  items: ['Streamlit'],
                 },
                 {
                   label: 'Tools & Practices',

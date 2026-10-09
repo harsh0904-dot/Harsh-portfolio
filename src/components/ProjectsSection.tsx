@@ -61,6 +61,15 @@ const PROJECTS: ProjectData[] = [
   },
   {
     number: '05',
+    category: 'Analytics Engineering',
+    name: 'Analytics Engineering Platform: Fintech Fraud, SaaS Revenue & Support Quality',
+    description: 'Built three analytics sub-projects: (1) Fintech Fraud & Risk Monitoring — bulk-loaded 6.3M PaySim transactions into PostgreSQL, modeled in dbt with staging/dimensions/fact/marts, and delivered a Grafana dashboard for fraud rate, exposure, and detection recall with a 1.5% fraud-rate email alert; (2) SaaS Revenue & Product Analytics — dimensional models and metric marts for MRR/ARR, churn, cohort retention, ARPU and feature adoption with Jenkins automation; (3) Support Quality Analytics — extracted GitHub issue data via REST API into PostgreSQL, modeled in dbt, and delivered an Apache Superset dashboard for backlog, closure rate, and time-to-close.',
+    techStack: ['Python', 'PostgreSQL', 'dbt', 'Jenkins', 'Superset', 'Grafana'],
+    col1Image2: '/code_editor_generic.png',
+    col2Image: '/etl_platform_one.png',
+  },
+  {
+    number: '06',
     category: 'Streaming Data Pipelines',
     name: 'Real-Time Weather Alert & Monitoring System',
     description: 'Architected a scalable streaming pipeline using Apache Kafka for real-time data ingestion, with automated Telegram alerts and interactive dashboards serving 500+ users at sub-second latency.',
@@ -71,7 +80,7 @@ const PROJECTS: ProjectData[] = [
     col2Image: '/weather_alert_one.png',
   },
   {
-    number: '06',
+    number: '07',
     category: 'Machine Learning',
     name: 'Diabetes Prediction Model with Explainability',
     description: 'Achieved 85% prediction accuracy using ensemble methods and GridSearchCV hyperparameter tuning; applied SHAP and LIME so healthcare stakeholders could interpret feature importance behind predictions.',
@@ -82,7 +91,7 @@ const PROJECTS: ProjectData[] = [
     col2Image: '/diabetes_model_one.png',
   },
   {
-    number: '07',
+    number: '08',
     category: 'Natural Language Processing',
     name: 'Smart Campus Chatbot',
     description: 'Engineered a chatbot handling 100+ query types with 90%+ intent classification accuracy, integrated with campus databases for real-time schedule and resource lookups.',

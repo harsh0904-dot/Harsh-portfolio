@@ -4,27 +4,27 @@ import FadeIn from './FadeIn';
 const SERVICES = [
   {
     number: '01',
-    title: 'Data Engineering & ETL Pipelines',
+    title: 'Data Engineering & ETL/ELT Pipelines',
     description:
-      'Building end-to-end data pipelines using Python (requests, pandas) and REST APIs. Ingesting, transforming, and loading multi-source QA datasets into centralized PostgreSQL data warehouses.',
+      'Building end-to-end ETL/ELT pipelines using Python (requests, pandas) and REST APIs. Ingesting, transforming, and loading multi-source datasets from SaaS systems and APIs into centralized PostgreSQL data warehouses.',
   },
   {
     number: '02',
-    title: 'Data Visualization & Analytics',
+    title: 'Data Visualization & BI Reporting',
     description:
-      'Designing and deploying interactive Grafana, Tableau, and Power BI dashboards. Creating dynamic variables and time-series queries to track key metrics and trends.',
+      'Designing and deploying interactive Grafana, Tableau, Power BI, and Apache Superset dashboards with dynamic variables, time-series queries, and KPI-driven executive reporting for cross-functional stakeholder teams.',
   },
   {
     number: '03',
-    title: 'QA Automation & Testing (Beginner)',
+    title: 'Analytics Engineering & dbt',
     description:
-      'Automating test reporting workflows, optimizing test case metrics, and integrating TestRail with Jira to enhance QA visibility across engineering teams.',
+      'Building dimensional models (staging, dimensions, facts, marts) and semantic/metrics layers using dbt with automated testing, CI/CD via Jenkins, and data governance to ensure trusted, queryable data products.',
   },
   {
     number: '04',
     title: 'Database Design & Optimization',
     description:
-      'Optimizing SQL queries, designing high-performance database schemas, and building relational databases that support real-time data visualization and processing.',
+      'Optimizing SQL queries, designing high-performance database schemas with dimensional modeling, and building relational databases that support real-time data visualization, data warehousing, and analytics processing.',
   },
 ];
 
