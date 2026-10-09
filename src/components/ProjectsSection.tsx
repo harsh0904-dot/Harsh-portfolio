@@ -15,30 +15,32 @@ interface ProjectData {
   col1Image2?: string;
   col2Image?: string;
   isPowerBI?: boolean;
+  multiRepoUrls?: { label: string; href: string }[];
 }
 
 const PROJECTS: ProjectData[] = [
   {
     number: '01',
-    category: 'Analytics & Dashboarding',
-    name: 'Multi-Domain Analytics Portfolio',
-    description: 'Built and deployed a multi-page interactive analytics platform using Streamlit and Plotly, delivering domain-specific dashboards with 2D/3D visualizations, geographic maps, and KPI scorecards for E-commerce, Travel, and Food Delivery (Zomato) datasets.',
-    liveUrl: 'https://github.com/harsh0904-dot/streamlit-analytics-portfolio',
-    buttonLabel: 'View Code',
-    techStack: ['Streamlit', 'Plotly', 'Python', 'Pandas', 'NumPy'],
+    category: 'Data Engineering',
+    name: 'ETL & Analytics Platform for Test Management',
+    description: 'Built an end-to-end data warehouse integrating multi-source QA data through automated ETL workflows and statistical analysis, enabling cross-project reporting and trend analysis for 15+ engineering teams.',
+    techStack: ['Python', 'PostgreSQL', 'Grafana', 'REST APIs'],
     col1Image2: '/code_editor_generic.png',
-    col2Image: '/multidomain_analytics.png',
+    col2Image: '/etl_platform_one.png',
   },
   {
     number: '02',
-    category: 'Real-Time KPI Monitoring',
-    name: 'Live Monitoring Analytics Dashboard',
-    description: 'Designed and deployed a production-ready, multi-page analytics dashboard using Streamlit with modular architecture, persistent session state, caching, and interactive 2D/3D visualizations (Plotly, PyVista) to support near real-time KPI monitoring and operational decision-making.',
-    liveUrl: 'https://github.com/harsh0904-dot/Live_Monitoring_Analytics_Dashboard',
-    buttonLabel: 'View Code',
-    techStack: ['Python', 'Streamlit', 'Plotly', 'PyVista', 'Pandas', 'NumPy'],
+    category: 'Analytics Engineering',
+    name: 'Analytics Engineering Platform: Fintech Fraud, SaaS Revenue & Support Quality',
+    description: 'Built three analytics sub-projects: (1) Fintech Fraud & Risk Monitoring — bulk-loaded 6.3M PaySim transactions into PostgreSQL, modeled in dbt with staging/dimensions/fact/marts, and delivered a Grafana dashboard for fraud rate, exposure, and detection recall with a 1.5% fraud-rate email alert; (2) SaaS Revenue & Product Analytics — dimensional models and metric marts for MRR/ARR, churn, cohort retention, ARPU and feature adoption with Jenkins automation; (3) Support Quality Analytics — extracted GitHub issue data via REST API into PostgreSQL, modeled in dbt, and delivered an Apache Superset dashboard for backlog, closure rate, and time-to-close.',
+    techStack: ['Python', 'PostgreSQL', 'dbt', 'Jenkins', 'Superset', 'Grafana'],
+    multiRepoUrls: [
+      { label: 'Fintech Fraud', href: 'https://github.com/harsh0904-dot/fintech-fraud-analytics' },
+      { label: 'SaaS Revenue', href: 'https://github.com/harsh0904-dot/saas-revenue-analytics' },
+      { label: 'Support Quality', href: 'https://github.com/harsh0904-dot/support-quality-analytics' },
+    ],
     col1Image2: '/code_editor_generic.png',
-    col2Image: '/live_monitoring.png',
+    col2Image: '/etl_platform_one.png',
   },
   {
     number: '03',
@@ -52,54 +54,25 @@ const PROJECTS: ProjectData[] = [
   },
   {
     number: '04',
-    category: 'Data Engineering',
-    name: 'ETL & Analytics Platform for Test Management',
-    description: 'Built an end-to-end data warehouse integrating multi-source QA data through automated ETL workflows and statistical analysis, enabling cross-project reporting and trend analysis for 15+ engineering teams.',
-    techStack: ['Python', 'PostgreSQL', 'Grafana', 'REST APIs'],
+    category: 'Analytics & Dashboarding',
+    name: 'Multi-Domain Analytics Portfolio',
+    description: 'Built and deployed a multi-page interactive analytics platform using Streamlit and Plotly, delivering domain-specific dashboards with 2D/3D visualizations, geographic maps, and KPI scorecards for E-commerce, Travel, and Food Delivery (Zomato) datasets. Engineered data cleaning and transformation pipelines with Pandas and NumPy to ensure accurate metric computation and stable chart rendering; deployed end-to-end on Streamlit Cloud with GitHub version control.',
+    liveUrl: 'https://github.com/harsh0904-dot/streamlit-analytics-portfolio',
+    buttonLabel: 'View Code',
+    techStack: ['Streamlit', 'Plotly', 'Python', 'Pandas', 'NumPy'],
     col1Image2: '/code_editor_generic.png',
-    col2Image: '/etl_platform_one.png',
+    col2Image: '/multidomain_analytics.png',
   },
   {
     number: '05',
-    category: 'Analytics Engineering',
-    name: 'Analytics Engineering Platform: Fintech Fraud, SaaS Revenue & Support Quality',
-    description: 'Built three analytics sub-projects: (1) Fintech Fraud & Risk Monitoring — bulk-loaded 6.3M PaySim transactions into PostgreSQL, modeled in dbt with staging/dimensions/fact/marts, and delivered a Grafana dashboard for fraud rate, exposure, and detection recall with a 1.5% fraud-rate email alert; (2) SaaS Revenue & Product Analytics — dimensional models and metric marts for MRR/ARR, churn, cohort retention, ARPU and feature adoption with Jenkins automation; (3) Support Quality Analytics — extracted GitHub issue data via REST API into PostgreSQL, modeled in dbt, and delivered an Apache Superset dashboard for backlog, closure rate, and time-to-close.',
-    techStack: ['Python', 'PostgreSQL', 'dbt', 'Jenkins', 'Superset', 'Grafana'],
-    col1Image2: '/code_editor_generic.png',
-    col2Image: '/etl_platform_one.png',
-  },
-  {
-    number: '06',
-    category: 'Streaming Data Pipelines',
-    name: 'Real-Time Weather Alert & Monitoring System',
-    description: 'Architected a scalable streaming pipeline using Apache Kafka for real-time data ingestion, with automated Telegram alerts and interactive dashboards serving 500+ users at sub-second latency.',
-    techStack: ['Apache Kafka', 'PostgreSQL', 'Superset', 'Telegram API'],
-    liveUrl: 'https://github.com/harsh0904-dot/Real-Time-Alert-Mechanism-System',
+    category: 'Real-Time KPI Monitoring',
+    name: 'Live Monitoring Analytics Dashboard',
+    description: 'Designed and deployed a production-ready, multi-page analytics dashboard (Home, About, Dashboard) using Streamlit with modular architecture, persistent session state, caching, and interactive 2D/3D visualizations (Plotly, PyVista) to support near real-time KPI monitoring and operational decision-making. Improved reliability and cloud readiness by fixing refresh/query-parameter navigation issues, removing forced browser-refresh behavior, documenting API data sources for transparency, and configuring Render + Streamlit Cloud deployments.',
+    liveUrl: 'https://github.com/harsh0904-dot/Live_Monitoring_Analytics_Dashboard',
     buttonLabel: 'View Code',
+    techStack: ['Python', 'Streamlit', 'Plotly', 'PyVista', 'Pandas', 'NumPy'],
     col1Image2: '/code_editor_generic.png',
-    col2Image: '/weather_alert_one.png',
-  },
-  {
-    number: '07',
-    category: 'Machine Learning',
-    name: 'Diabetes Prediction Model with Explainability',
-    description: 'Achieved 85% prediction accuracy using ensemble methods and GridSearchCV hyperparameter tuning; applied SHAP and LIME so healthcare stakeholders could interpret feature importance behind predictions.',
-    techStack: ['XGBoost', 'Random Forest', 'SHAP', 'LIME'],
-    liveUrl: 'https://github.com/harsh0904-dot/Machine-Learning-Research-Paper',
-    buttonLabel: 'View Code',
-    col1Image2: '/code_editor_generic.png',
-    col2Image: '/diabetes_model_one.png',
-  },
-  {
-    number: '08',
-    category: 'Natural Language Processing',
-    name: 'Smart Campus Chatbot',
-    description: 'Engineered a chatbot handling 100+ query types with 90%+ intent classification accuracy, integrated with campus databases for real-time schedule and resource lookups.',
-    techStack: ['Python', 'NLP', 'Database Integration'],
-    liveUrl: 'https://github.com/harsh0904-dot/Chatbot-Assistant',
-    buttonLabel: 'View Code',
-    col1Image2: '/code_editor_generic.png',
-    col2Image: '/chatbot_one.png',
+    col2Image: '/live_monitoring.png',
   },
 ];
 
@@ -225,7 +198,24 @@ const ProjectCard = ({ project, index, total, onZoomImage }: ProjectCardProps) =
             </div>
           </div>
 
-          {project.liveUrl && (
+          {project.multiRepoUrls && project.multiRepoUrls.length > 0 ? (
+            <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
+              <div className="flex flex-wrap gap-2">
+                {project.multiRepoUrls.map((repo) => (
+                  <a
+                    key={repo.label}
+                    href={repo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[#D7E2EA]/25 bg-[#D7E2EA]/[0.05] px-3.5 py-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#D7E2EA]/80 whitespace-nowrap transition-all duration-200 hover:bg-[#D7E2EA]/15 hover:border-[#D7E2EA]/50 hover:text-[#D7E2EA] hover:scale-[1.03] active:scale-95"
+                  >
+                    <svg className="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    {repo.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : project.liveUrl && (
             <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
               <LiveProjectButton
                 href={project.liveUrl}
